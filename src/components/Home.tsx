@@ -22,6 +22,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import { TextHoverEffect } from "./ui/text-hover-effect";
 import { Spotlight } from "./ui/Spotlight";
+import { BackgroundLines } from "./ui/background-lines";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -318,13 +319,18 @@ export default function PortfolioPage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="relative aspect-square bg-black rounded-lg overflow-hidden"
+              transition={{ duration: 2.5 }}
+              className="relative aspect-square rounded-lg overflow-hidden"
             >
-              <img
-                src="/untitled-3.jpg"
+              {/* <img
+                src="https://i.pinimg.com/474x/bd/39/21/bd3921cd01e83e3bd123a2c0a8ffae66.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
+              /> */}
+              <BackgroundLines
+                children
+                className="hello world"
+                svgOptions={{ duration: 15 }}
               />
             </motion.div>
           </div>
