@@ -1,9 +1,13 @@
-import PortfolioPage from "@/components/Home";
+// import Scene from "@/components/Scene";
+
+import HomePage from "@/components/Home";
 
 const Home = () => {
   return (
     <div>
-      <PortfolioPage />
+      <HomePage />
+
+      {/* <Scene /> */}
     </div>
   );
 };

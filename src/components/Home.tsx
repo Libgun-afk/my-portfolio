@@ -6,25 +6,15 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  ArrowUp,
-  Navigation,
-  Menu,
-} from "lucide-react";
+
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useTheme } from "next-themes";
-import { IoMdMenu, IoMdArrowRoundBack } from "react-icons/io";
+import { IoMdMenu } from "react-icons/io";
 import { CgDarkMode } from "react-icons/cg";
 import { VscChromeClose } from "react-icons/vsc";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { TextHoverEffect } from "./ui/text-hover-effect";
-import { Spotlight } from "./ui/Spotlight";
-import { BackgroundLines } from "./ui/background-lines";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -32,7 +22,7 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
-export default function PortfolioPage() {
+export default function HomePage() {
   const { theme, setTheme, systemTheme } = useTheme(); // Now inside the component
   const [open, setOpen] = useState(false);
 
@@ -147,6 +137,22 @@ export default function PortfolioPage() {
         name: "APOLLO GRAPHQL",
         icon: "data:image/png;base64,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",
       },
+      {
+        name: "SASS",
+        icon: "https://img.icons8.com/?size=100&id=QBqFNfPPB2Kx&format=png&color=000000",
+      },
+      {
+        name: "SVELTE",
+        icon: "https://img.icons8.com/?size=96&id=Mm35TzLKahiF&format=png",
+      },
+      {
+        name: "NPM",
+        icon: "https://img.icons8.com/?size=96&id=24895&format=png",
+      },
+      {
+        name: "FIGMA",
+        icon: "https://img.icons8.com/?size=96&id=W0YEwBDDfTeu&format=png",
+      },
     ],
     learning: [
       { name: "NODEJS", icon: "https://www.svgrepo.com/show/452202/figma.svg" },
@@ -206,7 +212,7 @@ export default function PortfolioPage() {
     <div className={`min-h-screen  transition-colors duration-500`}>
       <section className="relative h-screen">
         <div className="container mx-auto px-4 h-full">
-          <nav className="py-4 px-2 flex  justify-between items-center   transition-colors duration-500">
+          <nav className="py-4 px-2 flex  justify-between items-center   transition-colors duration-500 bg-fixed">
             {/* Logo */}
             <div className="text-2xl font-bold text-black dark:text-white ">
               Pinecone
@@ -265,7 +271,7 @@ export default function PortfolioPage() {
                 exit="exit"
                 variants={menuVariants}
               >
-                <div className="flex flex-col px-2">
+                <div className="flex flex-col px-2 ">
                   <Link
                     href="#about"
                     className="mb-4 text-2xl font-semibold hover:text-gray-600 text-black dark:text-white"

@@ -15,8 +15,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Bilguun",
+  title: "Libgun dev",
   description: "Bilguun's Portfolio",
+  icons: {
+    icon: "https://i.pinimg.com/736x/17/d5/c1/17d5c1f93cd9f264d10e2de24bc541f4.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +39,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col">
-            {/* <NavigationMenu /> */}
             <main className="flex-1">{children}</main>
           </div>
         </ThemeProvider>
