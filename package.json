@@ -27,8 +27,7 @@
     "shadcn": "^2.1.6",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "theme-provider": "^1.0.8",
-    "three": "^0.172.0"
+    "theme-provider": "^1.0.8"
   },
   "devDependencies": {
     "@types/node": "^20",

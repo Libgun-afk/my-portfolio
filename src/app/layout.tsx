@@ -1,7 +1,10 @@
+/** @format */
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,9 +19,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Libgun dev",
-  description: "Bilguun's Portfolio",
+  description: "Libgun-dev",
   icons: {
-    icon: "https://i.pinimg.com/736x/17/d5/c1/17d5c1f93cd9f264d10e2de24bc541f4.jpg",
+    icon: "https://i.pinimg.com/474x/75/2a/62/752a62329013c70f047418a2fab3105a.jpg",
   },
 };
 
@@ -32,6 +35,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
