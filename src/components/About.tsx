@@ -5,7 +5,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const About = () => {
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 pt-10">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 pt-10 bg-black">
       {/* Section Title */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}

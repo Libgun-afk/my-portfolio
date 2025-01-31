@@ -20,7 +20,7 @@ export default function HeroSection() {
 
   return (
     <div
-      className="min-h-screen relative flex flex-col items-center justify-center text-white"
+      className="min-h-screen relative flex flex-col items-center justify-center text-white bg-black"
       style={{
         backgroundImage: `url('')`,
         backgroundSize: "cover",
