@@ -116,18 +116,26 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="border-2 border-white w-[200px] flex justify-center items-center px-8 py-2 text-xl font-bold text-white mx-auto"
-        >
-          TECH STACK
-        </motion.div>
+        <div className="flex flex-col justify-center items-center">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative px-8 py-2 text-xl  font-bold text-white"
+          >
+            <span className="relative z-10">Tech Stack</span>
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="absolute bottom-0 left-0 h-[2px] bg-blue-500"
+            />
+          </motion.div>
+        </div>
 
         {/* Skills Grid */}
         <div className="mt-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
             {skills.using.map((skill, index) => (
               <motion.div
                 key={skill.name}
@@ -135,7 +143,7 @@ const Skills = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center cursor-pointer rounded-lg bg-gray-900 p-2"
               >
                 <img
                   src={skill.icon}

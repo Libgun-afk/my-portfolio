@@ -1,19 +1,19 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Set default color variables */
-:root {
-  --background: 0, 0%, 100%; /* Light background */
-  --foreground: 0, 0%, 0%; /* Light foreground (text) */
-  --card: 0, 0%, 95%; /* Light card */
-  --card-foreground: 0, 0%, 0%; /* Dark text in cards */
+/* Spinner-ийн анимаци */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* Dark theme */
-[data-theme="dark"] {
-  --background: 220, 30%, 20%; /* Dark background */
-  --foreground: 0, 0%, 100%; /* Light foreground (text) */
-  --card: 220, 20%, 30%; /* Dark card */
-  --card-foreground: 0, 0%, 100%; /* Light text in cards */
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
