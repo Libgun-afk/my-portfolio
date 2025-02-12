@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import { LoadingProvider } from "@/LoadingProvider";
 import LoadingComponent from "./Loading";
 
-export default function HomePage({ children }: { children?: React.ReactNode }) {
+export default function HomePage() {
   return (
     <LoadingProvider>
       <LoadingComponent>
@@ -24,7 +24,6 @@ export default function HomePage({ children }: { children?: React.ReactNode }) {
             <Project />
             <Footer />
           </div>
-          {children}
         </div>
       </LoadingComponent>
     </LoadingProvider>
