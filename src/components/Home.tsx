@@ -1,4 +1,5 @@
 /** @format */
+
 "use client";
 
 import Navbar from "@/components/Navbar";
@@ -10,7 +11,7 @@ import Footer from "@/components/Footer";
 import { LoadingProvider } from "@/LoadingProvider";
 import LoadingComponent from "./Loading";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function HomePage({ children }: { children?: React.ReactNode }) {
   return (
     <LoadingProvider>
       <LoadingComponent>
