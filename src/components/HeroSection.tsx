@@ -34,13 +34,7 @@ export default function HeroSection() {
     <div
       id="hero"
       className="min-h-screen relative flex flex-col items-center justify-center text-white bg-black overflow-hidden"
-      style={{
-        backgroundImage: `url('/your-image.jpg')`, // 🔥 Background Image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      {/* Dark overlay with animation */}
       <motion.div
         initial={{ opacity: 0.3 }}
         animate={{ opacity: [0.3, 0.5, 0.3] }}
@@ -58,7 +52,6 @@ export default function HeroSection() {
           FullStack Software
         </motion.h1>
 
-        {/* Dynamic Text Effect */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,7 +64,6 @@ export default function HeroSection() {
           <span className="w-[3px] h-6 bg-white animate-pulse" />
         </motion.div>
 
-        {/* Social Icons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
