@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdMenu } from "react-icons/io";
 import { VscChromeClose } from "react-icons/vsc";
 import Link from "next/link";
-import HeroSection from "./HeroSection";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -34,7 +33,7 @@ const Navbar = () => {
     { href: "#projects", label: "Projects" },
 
     {
-      href: "https://drive.google.com/file/d/1G_mXATSDPVsVTFp8MFVY_gcbuAsKv_rH/view",
+      href: "https://drive.google.com/file/d/1s8vdu19Zlun-CSFBGcNNyo5Sh3TNjbAe/view",
       label: "My CV",
     },
   ];
@@ -50,7 +49,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div className="text-xl font-bold cursor-pointer text-white">
-        <Link href="#hero">{"<Libgun />"}</Link>
+        <Link href="#hero">{"< />"}</Link>
       </div>
       {/* Mobile Menu Button */}
       <div className="block md:hidden">
